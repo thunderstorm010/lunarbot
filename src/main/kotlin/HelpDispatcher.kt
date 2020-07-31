@@ -18,6 +18,7 @@ class HelpDispatcher(val client: GatewayDiscordClient) {
                     it.addField("Genel",genel_field_values,true)
                     it.addField("Yöneticiler",admin_field_values,true)
                 }?.subscribe()
+                msg.author.get().avatarUrl
             }
     }
 }

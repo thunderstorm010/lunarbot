@@ -12,6 +12,7 @@ object Main {
 
         ReadyEventDispatcher(client).execute()
         HelpDispatcher(client).execute()
+        AvatarDispatcher(client).execute()
 
         client.onDisconnect().block()
 
