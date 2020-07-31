@@ -13,6 +13,9 @@ object Main {
         ReadyEventDispatcher(client).execute()
         HelpDispatcher(client).execute()
         AvatarDispatcher(client).execute()
+        DmDuyuruDispatcher(client).execute()
+        EspriDispatcher(client).execute()
+        DeleteDispatcher(client).execute()
 
         client.onDisconnect().block()
 
