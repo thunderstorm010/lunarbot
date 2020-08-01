@@ -16,6 +16,8 @@ object Main {
         DmDuyuruDispatcher(client).execute()
         EspriDispatcher(client).execute()
         DeleteDispatcher(client).execute()
+        CustomCommandDispatcher(client).execute()
+        UserJoinedGuildDispatcher(client).execute()
 
         client.onDisconnect().block()
 

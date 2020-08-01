@@ -18,11 +18,12 @@ class AvatarDispatcher(val client:GatewayDiscordClient) {
             .subscribe {
                 if (it.message.content == "!avatar") {
                     it.message.channel.block().createMessage {z ->
-                        saveUrl("avatar.png",it.message.author.get().avatarUrl)
+
+                        //saveUrl("avatar.png",it.message.author.get().avatarUrl)
                         z.setContent("İşte avatarın, " + it.message.author.get().mention)
-                        z.addFile("avatar.png",File("avatar.png").inputStream())
+                        z.addFile("avatar.png",URL(it.message.author.get().avatarUrl).openStream())
                     }.subscribe()
-                    File("avatar.png").delete()
+                    //File("avatar.png").delete()
                 } else if (it.message.content.startsWith("!avatar") && it.message.userMentions.collectList().block()?.size!! > 0 && it.message.userMentions.collectList().block()?.size!! < 2) {
                     it.message.channel.block().createMessage { z->
                         z.setContent("İşte " + it.message.userMentions.collectList().block()?.get(0)?.mention + " kullanıcısının avatarı; ")
