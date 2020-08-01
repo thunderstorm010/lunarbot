@@ -1,10 +1,12 @@
+package com.thunderstorm010.lunarbot
+
 import discord4j.core.GatewayDiscordClient
 import discord4j.core.`object`.entity.Message
 import discord4j.core.`object`.entity.channel.GuildMessageChannel
 import discord4j.core.`object`.entity.channel.PrivateChannel
 import discord4j.core.event.domain.message.MessageCreateEvent
+import discord4j.rest.util.Color
 import discord4j.rest.util.Permission
-import io.netty.channel.MessageSizeEstimator
 
 class DeleteDispatcher(val client: GatewayDiscordClient) {
     fun execute() {
@@ -21,10 +23,16 @@ class DeleteDispatcher(val client: GatewayDiscordClient) {
                 channel.block()?.getMessagesBefore(m.id)?.take(m.content.split(" ")[1].toLong())?.map(Message::getId)).subscribe()
                 m.delete().subscribe()
                 Thread {
-                    m.channel.block().createMessage(m.content.split(" ")[1] + " mesaj uzaya fırlatıldı.").block().let { lll ->
-                        Thread.sleep(1000)
-                        lll.delete().subscribe()
+                    m.channel.block().createEmbed {l ->
+                        l.setTitle("!sil")
+                        l.setDescription(m.content.split(" ")[1] + " mesaj uzaya fırlatıldı, " + m.author.get().username + ".")
+                        l.setColor(Color.RED)
+                    }.block().let { n ->
+                        Thread.sleep(2000)
+                        n.delete().subscribe()
                     }
+
+
                 }.start()
 
             }

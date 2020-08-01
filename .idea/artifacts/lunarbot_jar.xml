@@ -1,0 +1,45 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lunarbot:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/lunarbot_jar</output-path>
+    <root id="archive" name="lunarbot.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="lunarbot.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/discord-json-api/1.5.3/e46e8d7ee6629ae39cef245601a5eb750b2c6e88/discord-json-api-1.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.austinv11.servicer/Servicer/1.0.3/ca77a233f82981cd9267fbce26bb0eb94e0e8414/Servicer-1.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/discord-json/1.5.3/b831474f24c1db74d902843d98c11cb82ccfee3d/discord-json-1.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/discord4j-common/3.1.0/4b93d6af7ac62cd075cfe8503bd6dd5419e9b7b6/discord4j-common-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/discord4j-core/3.1.0/7aa3f2739a5eb36d9ec97ca0f34fee46b6070e78/discord4j-core-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/discord4j-gateway/3.1.0/2b124ec40e5b7916eb8fff2f348f7ad746fccef9/discord4j-gateway-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/discord4j-rest/3.1.0/5117d4ac1d21b2424525814261201908243370fc/discord4j-rest-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/discord4j-voice/3.1.0/105445ea1af6b0d6857c15e8b8291bd05866a2fc/discord4j-voice-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/stores-api/3.1.3/4d1e190edab8c398e0966fa9c1d58a9f4dd94e49/stores-api-3.1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/simple-fsm/1.0.1/58cc3d3c4d25823eecb174a8e4807ba83299f36a/simple-fsm-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.discord4j/stores-jdk/3.1.3/ab8cf2a9ef8c1b651fe6042f326afc0066ed07ec/stores-jdk-3.1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.11.1/f083c4ac0fb8b3c6b8d5b62cd54122228ef62cee/jackson-annotations-2.11.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.11.1/8b02908d53183fdf9758e7e20f2fdee87613a962/jackson-core-2.11.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.11.1/f5d24a1dcf46000316d40c8c61196c48dd5677c5/jackson-databind-2.11.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.11.1/def9f0a127bce25b6bf561a96ed4abb2b18483ff/jackson-datatype-jdk8-2.11.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.51.Final/2f4efc2ed376b46f4eb27f9405fa5a32a3695177/netty-buffer-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.51.Final/1d9d8d24fad44ae249b941e9ef61169b5b457d39/netty-codec-http2-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.51.Final/67430433232450a13c0280159b087575a5e0897c/netty-codec-http-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-socks/4.1.51.Final/27e957c9bf84d413d224a7f4b424462fd6ee1f37/netty-codec-socks-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.51.Final/69b830d381b64e988632561d823b53f783efe9c5/netty-codec-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.51.Final/ef64ad6fe8a8bc380a96f6d67e9fc442689dd7e1/netty-common-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.51.Final/4b4f203d08e210903330778746397e4676b0db1d/netty-handler-proxy-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.51.Final/b4b1db4b71e4e082587da3a5684df101dab2dc3a/netty-handler-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.51.Final/47c0b7a0e0faf059d5b8c58b64d78b8f2cfc0463/netty-resolver-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.51.Final/a3fc714d4327b8ed8d471b0f045593887f72188d/netty-transport-native-epoll-4.1.51.Final-linux-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.51.Final/170f987d8dbba498734c0d15eb88b16cd38eebdf/netty-transport-native-unix-common-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.51.Final/dbbe2d21879ceb82e7b44cd505aba83b752001a4/netty-transport-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.projectreactor.addons/reactor-extra/3.3.3.RELEASE/e8d9adea315fc94199c42fc7936d28adf4255b40/reactor-extra-3.3.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty/0.9.10.RELEASE/16a7b6b0b77a8c2584a2f51608ebc85da89a82b6/reactor-netty-0.9.10.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.projectreactor/reactor-core/3.3.8.RELEASE/e6b2e8dc1f6548ae216b2ecdee0c0a32176317a/reactor-core-3.3.8.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/6ca8bee3d88957eaaaef077c41c908c9940492d8/kotlin-stdlib-common-1.3.72.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/8032138f12c0180bc4e51fe139d4c52b46db6109/kotlin-stdlib-1.3.72.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

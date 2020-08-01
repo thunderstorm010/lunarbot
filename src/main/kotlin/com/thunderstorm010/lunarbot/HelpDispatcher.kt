@@ -1,12 +1,13 @@
+package com.thunderstorm010.lunarbot
+
 import discord4j.core.GatewayDiscordClient
 import discord4j.core.`object`.entity.channel.PrivateChannel
 import discord4j.core.event.domain.message.MessageCreateEvent
 import discord4j.rest.util.Color
-import kotlin.properties.Delegates
 
 class HelpDispatcher(val client: GatewayDiscordClient) {
     fun execute() {
-        val KOMUT_LISTESI = arrayOf("yardım","avatar","dmduyuru","espri","sil") // Komut listesi
+        val KOMUT_LISTESI = arrayOf("yardım","avatar","dmduyuru","espri","sil","ip","kayıt") // Komut listesi
         client.eventDispatcher.on(MessageCreateEvent::class.java)
             .map (MessageCreateEvent::getMessage)
             .filter { message -> message.channel.block() !is PrivateChannel}
@@ -23,9 +24,12 @@ class HelpDispatcher(val client: GatewayDiscordClient) {
                             "\n!espri"
                     val admin_field_values = "!dmduyuru" + // Admin komutları
                             "\n!sil [msj sayısı]"
+                    val custom_field_values = "!ip" +
+                            "\n!kayıt"
                     embed.setColor(Color.RED) // Embed rengi: KIRMIZI
                     embed.addField("Genel",genel_field_values,false) // Embed alanı (Genel)
                     embed.addField("Yöneticiler",admin_field_values,false) // Embed alanı (Yöneticiler)
+                    embed.addField("Özel Komutlar",custom_field_values,false) // Embed alanı (özel komutlar)
                     embed.setFooter("https://github.com/thunderstorm010/lunarbot","https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png") // Footer (github linki)
                 }?.subscribe()
             }
@@ -46,7 +50,7 @@ class HelpDispatcher(val client: GatewayDiscordClient) {
                         embed.addField("Döndürür","`!avatar` :: Kullanıcının kendi avatarı." +
                                 "\n`!avatar [kullanıcı etiketi]` :: Etiketlenen kullanıcının avatarı.",false)
                         embed.setColor(Color.BLUE)
-                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738553651030786158/738672015518728282/dclogosu.png")
+                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738851044724965439/739078655178833960/avatar.png")
                     }.subscribe()
                 } else if (message.content.split(" ")[1].equals("yardım")) {
                     message.channel.block()!!.createEmbed {embed ->
@@ -55,14 +59,14 @@ class HelpDispatcher(val client: GatewayDiscordClient) {
                                 "\n`!yardım [komut ismi]`",false)
                         embed.addField("Açıklama","Komut listesi veya bir komut hakkındaki yardım sayfasını göstermek için kullanılır.",false)
                         embed.setColor(Color.BLUE)
-                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738553651030786158/738672015518728282/dclogosu.png")
+                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738851044724965439/739078655178833960/avatar.png")
                     }.subscribe()
                 } else if (message.content.split(" ")[1].equals("dmduyuru")) {
                     message.channel.block()!!.createEmbed {embed ->
                         embed.setTitle("!dmduyuru")
                         embed.addField("Kullanımı","`!dmduyuru [duyurulacak mesaj]`",false)
                         embed.addField("Açıklama","Sunucudaki bütün kullanıcılara bir duyuruyu mesajını iletir.",false)
-                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738553651030786158/738672015518728282/dclogosu.png")
+                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738851044724965439/739078655178833960/avatar.png")
                         embed.setColor(Color.BLUE)
                     }.subscribe()
                 } else if (message.content.split(" ")[1].equals("espri")) {
@@ -70,7 +74,7 @@ class HelpDispatcher(val client: GatewayDiscordClient) {
                         embed.setTitle("!espri")
                         embed.addField("Kullanımı","`!espri`",false)
                         embed.addField("Açıklama","Rastgele bir espri mesajı gönderir.",false)
-                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738553651030786158/738672015518728282/dclogosu.png")
+                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738851044724965439/739078655178833960/avatar.png")
                         embed.setColor(Color.BLUE)
                     }.subscribe()
                 } else if (message.content.split(" ")[1].equals("sil")) {
@@ -79,7 +83,7 @@ class HelpDispatcher(val client: GatewayDiscordClient) {
                         embed.addField("Kullanımı","`!sil [mesaj sayısı]`",false)
                         embed.addField("Açıklama","Belirtilen sayıdaki mesajları siler.",false)
                         embed.addField("Parametreler","`mesaj sayısı` :: Kaç tane mesaj silineceği",false)
-                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738553651030786158/738672015518728282/dclogosu.png")
+                        embed.setFooter("Thunderstorm#0200 tarafından yapıldı","https://cdn.discordapp.com/attachments/738851044724965439/739078655178833960/avatar.png")
                         embed.setColor(Color.BLUE)
                     }.subscribe()
                 }

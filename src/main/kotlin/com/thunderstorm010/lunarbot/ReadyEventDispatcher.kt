@@ -1,3 +1,5 @@
+package com.thunderstorm010.lunarbot
+
 import discord4j.core.GatewayDiscordClient
 import discord4j.core.`object`.presence.Activity
 import discord4j.core.`object`.presence.Presence

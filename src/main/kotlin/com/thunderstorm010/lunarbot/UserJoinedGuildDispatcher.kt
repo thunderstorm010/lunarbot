@@ -1,6 +1,7 @@
+package com.thunderstorm010.lunarbot
+
 import discord4j.core.GatewayDiscordClient
 import discord4j.core.event.domain.guild.MemberJoinEvent
-import java.net.URL
 
 class UserJoinedGuildDispatcher(val client: GatewayDiscordClient) {
     fun execute() {

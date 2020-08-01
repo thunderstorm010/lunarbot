@@ -1,12 +1,11 @@
+package com.thunderstorm010.lunarbot
+
 import discord4j.core.GatewayDiscordClient
-import discord4j.core.`object`.entity.User
 import discord4j.core.`object`.entity.channel.PrivateChannel
 import discord4j.core.event.domain.message.MessageCreateEvent
 import java.io.*
 import java.net.MalformedURLException
 import java.net.URL
-import java.net.URLConnection
-import java.nio.charset.Charset
 
 
 class AvatarDispatcher(val client:GatewayDiscordClient) {

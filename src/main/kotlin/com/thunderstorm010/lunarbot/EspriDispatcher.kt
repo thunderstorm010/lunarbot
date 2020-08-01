@@ -1,7 +1,8 @@
+package com.thunderstorm010.lunarbot
+
 import discord4j.core.GatewayDiscordClient
 import discord4j.core.`object`.entity.channel.PrivateChannel
 import discord4j.core.event.domain.message.MessageCreateEvent
-import java.sql.Array
 
 class EspriDispatcher(val client: GatewayDiscordClient) {
     fun execute() {
