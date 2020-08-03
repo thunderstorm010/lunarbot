@@ -1,3 +1,4 @@
+@file:JvmName("Main")
 package com.thunderstorm010.lunarbot
 
 import discord4j.core.DiscordClientBuilder
