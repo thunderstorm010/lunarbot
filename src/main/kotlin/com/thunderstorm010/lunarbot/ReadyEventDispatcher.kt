@@ -10,7 +10,7 @@ class ReadyEventDispatcher(val client: GatewayDiscordClient) {
         client.eventDispatcher.on(ReadyEvent::class.java)
             .subscribe {
                 client
-                    .updatePresence(Presence.online(Activity.playing("Made by Thunderstorm")))
+                    .updatePresence(Presence.online(Activity.playing("185.193.165.2 de")))
                     .subscribe()
             }
     }
