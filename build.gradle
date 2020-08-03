@@ -19,5 +19,6 @@ dependencies {
 tasks.register("stage") {
     it.doLast {
         build
+        run()
     }
 }
