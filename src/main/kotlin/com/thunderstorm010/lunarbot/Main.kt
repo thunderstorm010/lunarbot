@@ -8,7 +8,7 @@ import discord4j.core.GatewayDiscordClient
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        val client: GatewayDiscordClient = DiscordClientBuilder.create(args[0])
+        val client: GatewayDiscordClient = DiscordClientBuilder.create(System.getenv("BOT_TOKEN"))
             .build()
             .login()
             .block()!!
