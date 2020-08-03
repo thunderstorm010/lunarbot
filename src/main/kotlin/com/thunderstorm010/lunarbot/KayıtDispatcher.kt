@@ -2,17 +2,15 @@ package com.thunderstorm010.lunarbot
 
 import discord4j.common.util.Snowflake
 import discord4j.core.GatewayDiscordClient
-import discord4j.core.`object`.entity.Role
 import discord4j.core.`object`.entity.channel.PrivateChannel
 import discord4j.core.event.domain.message.MessageCreateEvent
-import reactor.core.publisher.Flux
-import reactor.core.publisher.Mono
 
 class KayıtDispatcher(val client: GatewayDiscordClient) {
     fun execute() {
         client.eventDispatcher.on(MessageCreateEvent::class.java)
                 .filter {it.message.channel.block() !is PrivateChannel}
                 .filter {!it.member.get().isBot }
+                .filter {it.message.content.startsWith("!kayıtet")}
                 .filter { it.member.get().roles.collectList().block()!!.contains(client.getRoleById(Snowflake.of(738553650531795044), Snowflake.of(739193698486845500)).block()) }
                 .filter {
                     if (it.message.content.split(" ").getOrNull(1) == null) {

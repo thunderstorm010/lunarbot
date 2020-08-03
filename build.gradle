@@ -15,3 +15,9 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     implementation 'com.discord4j:discord4j-core:3.1.0'
 }
+
+tasks.register("stage") {
+    it.doLast {
+        build
+    }
+}

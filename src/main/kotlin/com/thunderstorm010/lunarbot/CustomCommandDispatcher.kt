@@ -11,12 +11,12 @@ class CustomCommandDispatcher(val client: GatewayDiscordClient) {
         val komutlistesi = arrayOf("!kayıt","!ip")
         client.eventDispatcher.on(MessageCreateEvent::class.java)
                 .map (MessageCreateEvent::getMessage)
-                .filter { it.channel.block() == client.getChannelById(Snowflake.of(738553650611224590)) || it.channel.block() == client.getChannelById(Snowflake.of(738553651655737377)) }
+                //.filter { it.channel.block() == client.getChannelById(Snowflake.of(738553650611224590)) || it.channel.block() == client.getChannelById(Snowflake.of(738553651655737377)) }
                 .filter { it.channel.block() !is PrivateChannel }
                 .filter { !it.author.get().isBot }
                 .filter { it.content.equalsAnyOf(komutlistesi)}
                 .subscribe {
-                    if (it.content == "!kayıt" && it.channel.block() == client.getChannelById(Snowflake.of(738553650611224590))) {
+                    if (it.content == "!kayıt" /* && it.channel.block() == client.getChannelById(Snowflake.of(738553650611224590))*/) {
                         it.channel.block()?.createEmbed {
                             println("embed triggered!")
                             it.setTitle("!kayıt")
@@ -36,7 +36,8 @@ class CustomCommandDispatcher(val client: GatewayDiscordClient) {
                             it.setFooter("Made by Thunderstorm","https://cdn.discordapp.com/attachments/738851044724965439/739078655178833960/avatar.png")
                             it.setColor(Color.BLUE)
                         }?.subscribe()
-                    } else if (it.content == "!ip" && it.channel.block() == client.getChannelById(Snowflake.of(738553651655737377))) {
+                        //738553651655737377
+                    } else if (it.content == "!ip"/* && it.channel.block() == client.getChannelById(Snowflake.of(738553651655737377))*/) {
                         it.channel.block()?.createEmbed {
                             it.setColor(Color.BLUE)
                             it.setDescription("**:star2: Sunucu IP Adresi : 185.193.165.2**\n" +
