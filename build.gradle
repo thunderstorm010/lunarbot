@@ -16,9 +16,9 @@ dependencies {
     implementation 'com.discord4j:discord4j-core:3.1.0'
 }
 
-tasks.register("stage") {
-    it.doLast {
-        build
-        run()
-    }
+task stage(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get()
 }
