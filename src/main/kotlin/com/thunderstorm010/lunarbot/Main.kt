@@ -22,6 +22,7 @@ object Main {
         CustomCommandDispatcher(client).execute()
         UserJoinedGuildDispatcher(client).execute()
         KayıtDispatcher(client).execute()
+        ShutdownDispatcher(client).execute()
 
         client.onDisconnect().block()
 
