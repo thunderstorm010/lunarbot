@@ -11,7 +11,7 @@ class KayıtDispatcher(val client: GatewayDiscordClient) {
                 .filter {it.message.channel.block() !is PrivateChannel}
                 .filter {!it.member.get().isBot }
                 .filter {it.message.content.startsWith("!kayıtet")}
-                .filter { it.member.get().roles.collectList().block()!!.contains(client.getRoleById(Snowflake.of(738553650531795044), Snowflake.of(739193698486845500)).block()) }
+                .filter { it.member.get().roles.collectList().block()!!.contains(client.getRoleById(Snowflake.of(738553650531795044), Snowflake.of(739822186277240843)).block()) }
                 .filter {
                     if (it.message.content.split(" ").getOrNull(1) == null) {
                         it.message.channel.block()!!.createMessage("Parametre (kullanıcı adı) verilmemiş.").subscribe()
